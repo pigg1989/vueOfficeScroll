@@ -1,0 +1,46 @@
+
+$designWidth: 1920;
+$navbarBgColor: #343232;
+$mainColor: #0297ff;
+$modelBgColor: #fafcff;
+@function px2rem($px){
+    @return $px / 192 + rem;
+}
+@function getColor(){
+    @return '#' + random(255) + random(255) + random(255);
+}
+@mixin devBorder{
+    border: 1px solid red;
+}
+body{
+    width: px2rem(1920);
+    // height: 100vh;   
+    overflow-x: hidden;
+    &,*{        
+        box-sizing: border-box;
+        font-family: MicrosoftYaHei;
+        font-size: px2rem(14);
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: px2rem(18);
+        letter-spacing: 0px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input::-webkit-input-placeholder {
+      
+             color: #999999;;
+      
+               font-size: 12px;
+      
+               text-align: left;
+           }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+    input{
+        text-indent: px2rem(16);
+    }
+}
